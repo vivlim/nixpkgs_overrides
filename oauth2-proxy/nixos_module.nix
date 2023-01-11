@@ -1,6 +1,6 @@
 # NixOS module for oauth2_proxy_mastodon.
 
-{ config, lib, pkgs, ... }:
+pkgs: flake: { config, lib, ... }:
 
 with lib;
 let
@@ -94,8 +94,8 @@ in
 
     package = mkOption {
       type = types.package;
-      default = pkgs.oauth2-proxy-mastodon;
-      defaultText = literalExpression "pkgs.oauth2-proxy-mastodon";
+      default = pkgs.oauth2-proxy-with-mastodon;
+      defaultText = literalExpression "pkgs.oauth2-proxy-with-mastodon";
       description = lib.mdDoc ''
         The package that provides oauth2-proxy.
       '';

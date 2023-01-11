@@ -1,4 +1,4 @@
-{ config, lib, ... }:
+flake: { config, lib, pkgs, ... }:
 with lib;
 let
   cfg = config.services.oauth2_proxy_mastodon.nginx;

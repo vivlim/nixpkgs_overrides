@@ -23,7 +23,7 @@
           oauth2-proxy-with-mastodon = pkgs.oauth2-proxy-with-mastodon;
         };
         nixosModules = {
-          oauth2-proxy-with-mastodon = (import ./oauth2-proxy/nixos_module.nix self);
+          oauth2-proxy-with-mastodon = (import ./oauth2-proxy/nixos_module.nix pkgs self );
           oauth2-proxy-with-mastodon-nginx = (import ./oauth2-proxy/nixos_nginx_module.nix self);
         };
       }
